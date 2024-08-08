@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import axios from 'axios';
-import Skeleton from 'react-loading-skeleton';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import CardSkeleton from '../Skeleton/CardSkeleton';
 
 const endpoint = 'https://dummyjson.com';
 
@@ -32,7 +33,7 @@ const PopularCategory = () => {
 		</div>
 	));
 
-	console.log(productItem);
+	console.log(<Skeleton />);
 
 	return (
 		<div className='container'>
@@ -43,7 +44,10 @@ const PopularCategory = () => {
 				</span>
 			</div>
 
-			<div className='grid grid-cols-5 gap-6'>{productItem}</div>
+			<div className='grid grid-cols-5 gap-6'>
+				{loading && <CardSkeleton cards={10} />}
+				{productItem}
+			</div>
 		</div>
 	);
 };
