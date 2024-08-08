@@ -23,7 +23,7 @@ const PopularCategory = () => {
 	const productItem = products?.slice(0, 10).map((product) => (
 		<div
 			key={product.id}
-			className='shadow-inset rounded-[30px] pt-5 pb-3 flex flex-col items-center justify-center'
+			className='shadow-inset rounded-[30px] pt-5 px-3 pb-3 flex flex-col items-center justify-center'
 		>
 			<div>
 				<img className='mx-auto object-contain w-[105px] h-[129px]' src={product.images[0]} alt='' />
