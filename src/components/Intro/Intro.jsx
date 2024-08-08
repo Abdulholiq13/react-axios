@@ -6,7 +6,7 @@ import ButtonOrange from '../Buttons/ButtonOrange';
 const Intro = () => {
 	return (
 		<section className='pt-[131px] pb-[61px]'>
-			<div className='container flex justify-between'>
+			<div className='container flex gap-6 justify-between'>
 				<div className='flex flex-col px-[60px] pt-[46px] pb-[60px] shadow-inset rounded-[60px]'>
 					<h2 className='w-[351px] text-[48px] font-jost font-bold leading-[44px] mb-[31px]'>
 						Мебель на любой вкус!

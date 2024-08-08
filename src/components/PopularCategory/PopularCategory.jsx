@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 const endpoint = 'https://dummyjson.com';
 
@@ -25,7 +26,6 @@ const PopularCategory = () => {
 			className='shadow-inset rounded-[30px] pt-5 pb-3 flex flex-col items-center justify-center'
 		>
 			<div>
-				{loading && <Skeleton height='100%' count={1} />}
 				<img className='mx-auto object-contain w-[105px] h-[129px]' src={product.images[0]} alt='' />
 			</div>
 			<h3 className='text-center inline-block '>{product.title}</h3>
@@ -43,7 +43,7 @@ const PopularCategory = () => {
 				</span>
 			</div>
 
-			<div className='grid grid-cols-5 gap-6'>{loading ? <div>Loading...</div> : productItem}</div>
+			<div className='grid grid-cols-5 gap-6'>{productItem}</div>
 		</div>
 	);
 };
