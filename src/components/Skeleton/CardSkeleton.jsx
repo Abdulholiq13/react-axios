@@ -4,7 +4,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 const CardSkeleton = ({ cards }) => {
 	return Array(cards)
 		.fill(0)
-		.map((_, item) => (
+		.map(() => (
 			<>
 				<div className='flex flex-col'>
 					<div>

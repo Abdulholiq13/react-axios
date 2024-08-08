@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import axios from 'axios';
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
 import CardSkeleton from '../Skeleton/CardSkeleton';
 
 const endpoint = 'https://dummyjson.com';
@@ -32,8 +30,6 @@ const PopularCategory = () => {
 			<h3 className='text-center inline-block '>{product.title}</h3>
 		</div>
 	));
-
-	console.log(<Skeleton />);
 
 	return (
 		<div className='container'>
