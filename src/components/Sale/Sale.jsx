@@ -3,6 +3,7 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 import { TbShoppingCartPlus } from 'react-icons/tb';
 import { FaChevronDown } from 'react-icons/fa';
 import axios from 'axios';
+import SaleSkeleton from '../Skeleton/SaleSkeleton';
 
 const endpoint = 'https://dummyjson.com';
 
@@ -63,7 +64,7 @@ const Sale = () => {
 				</span>
 			</div>
 
-			<div className='grid grid-cols-4 gap-6'>{productCard}</div>
+			<div className='grid grid-cols-4 gap-6'>{loading ? <SaleSkeleton cards={4} /> : productCard}</div>
 		</div>
 	);
 };
