@@ -36,8 +36,14 @@ const Sale = () => {
 				</div>
 				<p className='text-[#FF3232] font-semibold text-lg '>12%</p>
 				<h3 className='text-left inline-block '>{product.title}</h3>
-				<small className='line-through text-[#7D7D7D] text-xs'>{Math.floor(product.price)} Br</small>
-				<p className='text-2xl font-semibold mb-[36px]'>{discountedPrice} Br</p>
+				<small className='line-through text-[#7D7D7D] text-xs'>
+					{Math.floor(product.price)
+						.toString()
+						.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' Br'}
+				</small>
+				<p className='text-2xl font-semibold mb-[36px]'>
+					{discountedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' Br'}
+				</p>
 
 				<div>
 					<button className='absolute group-hover:bottom-[20px] transition-all ease-in-out duration-150 left-[27px] -bottom-[120px] flex items-center justify-start gap-6 px-3 py-[5px] w-[92px] shadow-inset rounded-full'>
@@ -54,13 +60,14 @@ const Sale = () => {
 	});
 
 	return (
-		<div className='container'>
+		<div className='container mb-[60px]'>
 			<div className='flex items-end justify-start gap-5 mb-[35px]'>
 				<h2 className='font-jost text-4xl leading-8 font-bold'>
 					Скидки <span className='text-[#FF3232] font-normal'>%</span>
 				</h2>
-				<span className='flex items-center gap-3 text-lg'>
-					Все товары в категории <FaArrowRightLong className='text-base' />
+				<span className='group flex items-center gap-3 text-lg cursor-pointer hover:opacity-70'>
+					Все товары в категории{' '}
+					<FaArrowRightLong className='group-hover:ml-[40px] transition-all ease-in-out duration-150 text-base' />
 				</span>
 			</div>
 
