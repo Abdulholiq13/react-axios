@@ -151,7 +151,7 @@ const ProductStock = () => {
 			{limit * total <= hideTotal && (
 				<button
 					onClick={() => setTotal((p) => p + 1)}
-					className='bg-[#FF9900] text-white px-8 py-4 rounded-md font-jost capitalize block mx-auto'
+					className='bg-[#FF9900] text-white px-8 py-4 rounded-md font-jost capitalize block mx-auto mb-6'
 				>
 					See more
 				</button>
