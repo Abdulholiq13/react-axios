@@ -128,7 +128,7 @@ const ProductStock = () => {
 				</span>
 			</div>
 
-			<div className='flex flex-wrap gap-4 ml-auto'>
+			<div className='flex flex-wrap gap-4 ml-auto mb-6'>
 				{['all', ...categories].map((category) => (
 					<button
 						key={category}

@@ -1,3 +1,4 @@
+import Footer from './components/Footer/Footer';
 import HeaderTop from './components/HeaderTop/HeaderTop';
 import Intro from './components/Intro/Intro';
 import PopularCategory from './components/PopularCategory/PopularCategory';
@@ -12,6 +13,7 @@ const App = () => {
 			<PopularCategory />
 			<Sale />
 			<ProductStock />
+			<Footer />
 		</>
 	);
 };
