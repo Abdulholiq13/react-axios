@@ -1,18 +1,21 @@
+import { NavLink } from 'react-router-dom';
+
 const Navbar = () => {
+	const navbarLink = ['', '', '', ''];
 	return (
 		<>
 			<ul className='flex gap-7 text-[#000000]'>
-				<li>
-					<a href='/catalog'>Каталог</a>
+				<li className='hover:opacity-50'>
+					<NavLink to={'/catalog'}>Каталог</NavLink>
 				</li>
-				<li>
-					<a href='#'>Доставка</a>
+				<li className='hover:opacity-50'>
+					<NavLink to={'/delivery'}>Доставка</NavLink>
 				</li>
-				<li>
-					<a href='#'>Условия</a>
+				<li className='hover:opacity-50'>
+					<NavLink to={'/services'}>Условия</NavLink>
 				</li>
-				<li>
-					<a href='#'>Контакты</a>
+				<li className='hover:opacity-50'>
+					<NavLink to={'/contact'}>Контакты</NavLink>
 				</li>
 			</ul>
 		</>

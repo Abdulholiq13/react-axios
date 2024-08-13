@@ -68,7 +68,7 @@ const ProductStock = () => {
 
 	const handleCategorySelect = (category) => {
 		setSelectCategory(category);
-		setTotal(1); // Reset to the first page of products
+		setTotal(1);
 	};
 
 	const productStock = products.map((stockProduct) => {
@@ -128,18 +128,18 @@ const ProductStock = () => {
 				</span>
 			</div>
 
-			<div className='flex flex-wrap gap-4 ml-auto mb-6'>
+			<div className='flex overflow-x-scroll gap-4 ml-auto mb-6'>
 				{['all', ...categories].map((category) => (
 					<button
 						key={category}
-						className={`py-2 px-4 rounded-md ${
+						className={`py-2 px-4 rounded-md capitalize text-nowrap ${
 							selectCategory === category
 								? 'bg-[#FF9900] text-white'
 								: 'bg-white text-black border border-black'
 						}`}
 						onClick={() => handleCategorySelect(category)}
 					>
-						{category === 'all' ? 'All' : category.replace('/category/', '')}
+						{category === 'all' ? 'All' : category.replace('/category/', '').replace('-', ' ')}
 					</button>
 				))}
 			</div>
