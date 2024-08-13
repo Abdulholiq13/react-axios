@@ -1,7 +1,12 @@
 import React from 'react';
+import DeliveryInfo from '../components/Delivery/DeliveryInfo';
 
 const Delivery = () => {
-	return <div>Delivery</div>;
+	return (
+		<>
+			<DeliveryInfo />
+		</>
+	);
 };
 
 export default Delivery;
