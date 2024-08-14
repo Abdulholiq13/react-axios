@@ -1,7 +1,12 @@
 import React from 'react';
+import NotFountContent from '../components/NotFound/NotFountContent';
 
 const NotFound = () => {
-	return <div>404</div>;
+	return (
+		<>
+			<NotFountContent />
+		</>
+	);
 };
 
 export default NotFound;
