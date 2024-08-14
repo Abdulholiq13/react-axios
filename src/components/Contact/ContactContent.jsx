@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const ContactContent = () => {
 	return (
-		<div className='container'>
+		<div className='container py-5'>
 			<h2 className='text-4xl font-jost font-bold mb-[49px]'>Контакты</h2>
 
 			<div className='flex items-start justify-between'>
