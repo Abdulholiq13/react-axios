@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const ContactContent = () => {
@@ -35,4 +35,4 @@ const ContactContent = () => {
 	);
 };
 
-export default ContactContent;
+export default memo(ContactContent);

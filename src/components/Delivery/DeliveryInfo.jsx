@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 const DeliveryInfo = () => {
 	return (
@@ -37,7 +37,7 @@ const DeliveryInfo = () => {
 					<img
 						className='w-[681px] h-[884px]'
 						src='./src/assets/delivery-image.png'
-						alt=''
+						alt='delivery image'
 						width={681}
 						height={884}
 					/>
@@ -48,7 +48,7 @@ const DeliveryInfo = () => {
 					<img
 						className='w-[814px] h-[605px]'
 						src='./src/assets/delivery-image-2.png'
-						alt=''
+						alt='delivery image'
 						width={814}
 						height={605}
 					/>
@@ -112,4 +112,4 @@ const DeliveryInfo = () => {
 	);
 };
 
-export default DeliveryInfo;
+export default memo(DeliveryInfo);

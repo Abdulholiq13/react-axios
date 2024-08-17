@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 const ButtonOrange = (props) => {
 	return (
 		<>
@@ -8,4 +10,4 @@ const ButtonOrange = (props) => {
 	);
 };
 
-export default ButtonOrange;
+export default memo(ButtonOrange);

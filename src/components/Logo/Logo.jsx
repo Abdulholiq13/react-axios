@@ -1,14 +1,13 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
+import { memo } from 'react';
 
 const Logo = () => {
 	return (
 		<>
-			<NavLink to={'/'} className='hover:opacity-50'>
-				<img src={logo} alt='' />
-			</NavLink>
+			<img src={logo} alt='Logo' />
 		</>
 	);
 };
 
-export default Logo;
+export default memo(Logo);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { FaPlus } from 'react-icons/fa';
 
 const ButtonAddCart = () => {
@@ -11,4 +11,4 @@ const ButtonAddCart = () => {
 	);
 };
 
-export default ButtonAddCart;
+export default memo(ButtonAddCart);

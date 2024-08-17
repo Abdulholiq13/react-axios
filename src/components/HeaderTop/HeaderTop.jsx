@@ -1,6 +1,7 @@
 import Navbar from '../Navbar/Navbar';
 import HeaderLogo from '../Logo/Logo';
 import HeaderContact from '../HeaderTopContact/HeaderContact';
+import { memo } from 'react';
 
 const HeaderTop = () => {
 	return (
@@ -14,4 +15,4 @@ const HeaderTop = () => {
 	);
 };
 
-export default HeaderTop;
+export default memo(HeaderTop);

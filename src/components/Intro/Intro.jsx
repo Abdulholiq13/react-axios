@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import introImg from '../../assets/intro-img.jpg';
 import roundDisc from '../../assets/round-disc.svg';
 import ButtonGray from '../Buttons/ButtonGray';
@@ -14,19 +15,19 @@ const Intro = () => {
 					<ul className='text-[18px] leading-8 mb-[32px]'>
 						<li className='flex items-center gap-[6px]'>
 							<span>
-								<img src={roundDisc} alt='' />
+								<img src={roundDisc} alt='rounded icon' />
 							</span>
 							Худи, чашки для горячего чая и термосы
 						</li>
 						<li className='flex items-center gap-[6px]'>
 							<span>
-								<img src={roundDisc} alt='' />
+								<img src={roundDisc} alt='rounded icon' />
 							</span>
 							Eлочные игрушки, брелочки
 						</li>
 						<li className='flex items-center gap-[6px]'>
 							<span>
-								<img src={roundDisc} alt='' />
+								<img src={roundDisc} alt='rounded icon' />
 							</span>
 							Начало списка вещей, которые можно
 						</li>
@@ -40,4 +41,4 @@ const Intro = () => {
 	);
 };
 
-export default Intro;
+export default memo(Intro);

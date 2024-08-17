@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 const HeaderContact = () => {
 	return (
 		<>
@@ -13,4 +15,4 @@ const HeaderContact = () => {
 	);
 };
 
-export default HeaderContact;
+export default memo(HeaderContact);

@@ -1,55 +1,49 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import axios from '../api';
+import { memo, useEffect, useState } from 'react';
 
 import { useParams } from 'react-router-dom';
-import ButtonAddCart from '../components/Buttons/ButtonAddCart';
-import { FaMinus, FaPlus } from 'react-icons/fa';
+import ProductCardThumb from '../components/ProductCardThumb/ProductCardThumb';
+import SinglePageContent from '../components/SinglePageContent/SinglePageContent';
+import TextSkeleton from '../components/Skeleton/TextSkeleton';
+import SingleImgSkeleton from '../components/Skeleton/SingleImgSkeleton';
+import SingleBigSkeleton from '../components/Skeleton/SingleBigSkeleton';
 
 const Single = () => {
-	const endpoint = 'https://dummyjson.com';
-
 	const [product, setProduct] = useState(null);
-	const [count, setCount] = useState(0);
 	const { id } = useParams();
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
+		setLoading(true);
 		axios
-			.get(`${endpoint}/products/${id}`)
-			.then((res) => setProduct(res.data))
+			.get(`/products/${id}`)
+			.then((res) => (setProduct(res.data), setLoading(false)))
 			.catch((err) => console.error(err));
-	}, []);
-
+	}, [id]);
 	return (
 		<div className='container grid grid-cols-2 py-8'>
-			<div>
-				<img src={product?.images[0]} alt='' />
-			</div>
-			<div>
-				<h2 className=''>{product?.title}</h2>
-				<p className='line-clamp-2'>{product?.description}</p>
-				<div className='flex gap-4'>
-					<p className='inline-block'>{product?.price} Br</p>
+			<div className='flex flex-col'>
+				{loading ? (
+					<SingleBigSkeleton />
+				) : (
+					<img
+						className='mx-auto mb-4 w-[500px] h-[500px]'
+						src={product?.images[0]}
+						alt={product?.title}
+					/>
+				)}
 
-					<div className='transition-all ease-in-out duration-150 flex gap-4 items-center'>
-						<button
-							className='border-[2px] border-[#7D7D7D] p-[4px] rounded-md'
-							onClick={(prev) => setCount(count <= 0 ? count : count - 1)}
-						>
-							<FaMinus className='text-xs text-[#7D7D7D]' />
-						</button>
-						<p className='inline-block w-5 text-center'>{count}</p>
-						<button
-							className='border-[2px] border-[#7D7D7D] p-[4px] rounded-md'
-							onClick={(prev) => setCount(count + 1)}
-						>
-							<FaPlus className='text-xs text-[#7D7D7D]' />
-						</button>
-					</div>
+				<div className=''>
+					{loading ? <SingleImgSkeleton count={4} /> : <ProductCardThumb product={product} />}
 				</div>
-				<ButtonAddCart />
+			</div>
+
+			<div className='flex flex-col'>
+				{loading && <TextSkeleton count={2} />}
+				<SinglePageContent product={product} />
 			</div>
 		</div>
 	);
 };
 
-export default Single;
+export default memo(Single);

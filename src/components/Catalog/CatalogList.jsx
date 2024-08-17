@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import CatalogItem from './CatalogItem';
 import { NavLink } from 'react-router-dom';
 
@@ -103,4 +103,4 @@ const CatalogList = () => {
 	);
 };
 
-export default CatalogList;
+export default memo(CatalogList);

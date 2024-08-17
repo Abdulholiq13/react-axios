@@ -1,35 +1,28 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
-import axios from 'axios';
+import axios from '../../api';
 import CardSkeleton from '../Skeleton/CardSkeleton';
-
-const endpoint = 'https://dummyjson.com';
+import ProductCard from '../ProductCards/ProductCard';
 
 const PopularCategory = () => {
 	const [products, setProducts] = useState(null);
 	const [loading, setLoading] = useState(true);
 
+	const limit = 4;
+
 	useEffect(() => {
 		axios
-			.get(`${endpoint}/products`)
+			.get(`/products`, {
+				params: {
+					limit: limit * 1,
+				},
+			})
 			.then((res) => {
 				setProducts(res.data.products);
 				setLoading(false);
 			})
 			.catch((err) => console.error(err));
 	}, []);
-
-	const productItem = products?.slice(0, 10).map((product) => (
-		<div
-			key={product.id}
-			className='shadow-inset rounded-[30px] pt-5 px-3 pb-3 flex flex-col items-center justify-center'
-		>
-			<div>
-				<img className='mx-auto object-contain w-[105px] h-[129px]' src={product.images[0]} alt='' />
-			</div>
-			<h3 className='text-center inline-block '>{product.title}</h3>
-		</div>
-	));
 
 	return (
 		<div className='container pb-[60px]'>
@@ -40,12 +33,10 @@ const PopularCategory = () => {
 				</span>
 			</div>
 
-			<div className='grid grid-cols-5 gap-6'>
-				{loading && <CardSkeleton cards={10} />}
-				{productItem}
-			</div>
+			<div className='grid grid-cols-5 gap-6'>{loading && <CardSkeleton cards={10} />}</div>
+			<ProductCard products={products} />
 		</div>
 	);
 };
 
-export default PopularCategory;
+export default memo(PopularCategory);

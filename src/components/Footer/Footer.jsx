@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from '../Logo/Logo';
+import React, { memo } from 'react';
 import Logo from '../Logo/Logo';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	const footerLinks = ['Главная', 'Каталог', 'Товары в наличии'];
@@ -12,40 +12,40 @@ const Footer = () => {
 
 	const linksFirst = footerLinks?.map((link, id) => (
 		<li key={id} className='border-l-2 border-gray pl-1 text-sm first:border-l-0'>
-			{link}
+			<Link>{link}</Link>
 		</li>
 	));
 
 	const linksSecond = footerLinksSecond?.map((link, id) => (
 		<li key={id} className='border-l-2 border-gray pl-1 text-sm first:border-l-0'>
-			{link}
+			<Link>{link}</Link>
 		</li>
 	));
 
 	const linksThird = footerLinksThird?.map((link, id) => (
 		<li key={id} className='border-l-2 border-gray pl-1 text-sm first:border-l-0'>
-			{link}
+			<Link>{link}</Link>
 		</li>
 	));
 
 	const linksFourth = footerLinksFourth?.map((link, id) => (
 		<li key={id} className='border-l-2 border-gray pl-1 text-sm'>
-			{link}
+			<Link>{link}</Link>
 		</li>
 	));
 
 	const linksFifth = footerLinksFifth?.map((link, id) => (
 		<li key={id} className='border-l-2 border-gray pl-1 text-sm first:border-none'>
-			{link}
+			<Link>{link}</Link>
 		</li>
 	));
 
 	return (
 		<footer className='bg-[#f8f8f8]'>
 			<div className='container py-[50px]'>
-				<a href='/'>
+				<Link to='/'>
 					<Logo />
-				</a>
+				</Link>
 				<div className='grid grid-cols-3 justify-items-end'>
 					<div>
 						<h3 className='text-lg font-bold mb-4'>Информация</h3>
@@ -53,9 +53,9 @@ const Footer = () => {
 						<p className='mb-4'>
 							УНП 191828159 ИП Парейко В.С., регистрационный номер в торговом реестре 158299
 						</p>
-						<a href='#' className='underline underline-offset-2'>
+						<Link to={'#'} className='underline underline-offset-2'>
 							Политика конфиденциальности
-						</a>
+						</Link>
 					</div>
 					<div>
 						<h3 className='text-lg font-bold mb-4'>Меню</h3>
@@ -79,4 +79,4 @@ const Footer = () => {
 	);
 };
 
-export default Footer;
+export default memo(Footer);

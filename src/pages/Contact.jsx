@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import ContactContent from '../components/Contact/ContactContent';
 
 const Contact = () => {
@@ -9,4 +9,4 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+export default memo(Contact);

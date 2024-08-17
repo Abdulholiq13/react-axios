@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -22,4 +23,4 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+export default memo(Navbar);

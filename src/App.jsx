@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import Single from './pages/Single';
+import { memo } from 'react';
 
 const App = () => {
 	return (
@@ -27,4 +28,4 @@ const App = () => {
 	);
 };
 
-export default App;
+export default memo(App);

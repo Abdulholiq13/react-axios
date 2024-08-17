@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
@@ -41,4 +42,4 @@ const StockSkeleton = ({ cards }) => {
 		));
 };
 
-export default StockSkeleton;
+export default memo(StockSkeleton);

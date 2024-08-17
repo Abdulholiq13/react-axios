@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Intro from '../components/Intro/Intro';
 import PopularCategory from '../components/PopularCategory/PopularCategory';
 import ProductStock from '../components/ProductStock/ProductStock';
@@ -14,4 +15,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default memo(Home);
