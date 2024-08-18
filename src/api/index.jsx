@@ -5,4 +5,4 @@ const mainUrl = axios.create({
 	baseURL: 'https://dummyjson.com',
 });
 
-export default memo(mainUrl);
+export default mainUrl;

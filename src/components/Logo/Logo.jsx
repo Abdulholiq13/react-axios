@@ -1,11 +1,13 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import { memo } from 'react';
 
 const Logo = () => {
 	return (
 		<>
-			<img src={logo} alt='Logo' />
+			<Link to={'/'}>
+				<img src={logo} alt='Logo' />
+			</Link>
 		</>
 	);
 };

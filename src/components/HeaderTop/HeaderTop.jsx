@@ -2,6 +2,7 @@ import Navbar from '../Navbar/Navbar';
 import HeaderLogo from '../Logo/Logo';
 import HeaderContact from '../HeaderTopContact/HeaderContact';
 import { memo } from 'react';
+import { NavbarAccount } from '../NavbarAccount/NavbarAccount';
 
 const HeaderTop = () => {
 	return (
