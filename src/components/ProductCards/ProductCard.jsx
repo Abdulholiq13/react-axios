@@ -3,7 +3,7 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { memo } from 'react';
 
-const ProductCard = ({ products, salePrice }) => {
+const ProductCard = ({ products }) => {
 	const productStock = products?.map((stockProduct) => {
 		return (
 			<div

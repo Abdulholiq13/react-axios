@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const NavbarAccount = () => {
 	return (
 		<>
-			<Link to={'/account'}>
+			<Link to={'/login'}>
 				<RiAccountCircleFill className='text-[30px]' />
 			</Link>
 		</>
