@@ -1,12 +1,20 @@
 import React, { memo } from 'react';
 import CatalogItem from './CatalogItem';
 import { NavLink } from 'react-router-dom';
+import catalogImgFirst from '/src/assets/mebel.jpg';
+import catalogImgSecond from '/src/assets/aksesuar.jpg';
+import catalogImgThird from '/src/assets/xraneniya-podarok.jpg';
+import catalogImgFourth from '/src/assets/aksesuari.png';
+import catalogImgFifth from '/src/assets/mebel-2.jpg';
+import catalogImgSixth from '/src/assets/aksesuar-2.svg';
+import catalogImgSeventh from '/src/assets/xraneniya-podarok-2.jpg';
+import catalogImgEighth from '/src/assets/aksesuari-2.jpg';
 
 const CatalogList = () => {
 	const catalogInfo = [
 		{
 			id: 1,
-			image: '/src/assets/mebel.jpg',
+			image: catalogImgFirst,
 			title: 'Мебель',
 			texts: ['Шкафы и шкафы-купе', 'Стеллажи и книжные шкафы', 'Столы', 'Стулья', 'Кровати'],
 			more: 'Больше',
@@ -14,7 +22,7 @@ const CatalogList = () => {
 
 		{
 			id: 2,
-			image: '/src/assets/aksesuar.jpg',
+			image: catalogImgSecond,
 			title: 'Аксессуары для создания уюта',
 			texts: ['Постельное белье', 'Одеяла', 'Комплекты постельного белья', 'Подушки', 'Пледы'],
 			more: 'Больше',
@@ -22,7 +30,7 @@ const CatalogList = () => {
 
 		{
 			id: 3,
-			image: '/src/assets/xraneniya-podarok.jpg',
+			image: catalogImgThird,
 			title: 'Хранение и порядок',
 			texts: [
 				'Аксессуары для хранения',
@@ -36,7 +44,7 @@ const CatalogList = () => {
 
 		{
 			id: 4,
-			image: '/src/assets/aksesuari.png',
+			image: catalogImgFourth,
 			title: 'Аксессуары',
 			texts: ['Шкафы и шкафы-купе', 'Стеллажи и книжные шкафы', 'Столы', 'Стулья', 'Кровати'],
 			more: 'Больше',
@@ -44,7 +52,7 @@ const CatalogList = () => {
 
 		{
 			id: 5,
-			image: '/src/assets/mebel-2.jpg',
+			image: catalogImgFifth,
 			title: 'Мебель',
 			texts: ['Шкафы и шкафы-купе', 'Стеллажи и книжные шкафы', 'Столы', 'Стулья', 'Кровати'],
 			more: 'Больше',
@@ -52,7 +60,7 @@ const CatalogList = () => {
 
 		{
 			id: 6,
-			image: '/src/assets/aksesuar-2.svg',
+			image: catalogImgSixth,
 			title: 'Аксессуары для создания уюта',
 			texts: ['Постельное белье', 'Одеяла', 'Комплекты постельного белья', 'Подушки', 'Пледы'],
 			more: 'Больше',
@@ -60,7 +68,7 @@ const CatalogList = () => {
 
 		{
 			id: 7,
-			image: '/src/assets/xraneniya-podarok-2.jpg',
+			image: catalogImgSeventh,
 			title: 'Хранение и порядок',
 			texts: [
 				'Аксессуары для хранения',
@@ -73,8 +81,8 @@ const CatalogList = () => {
 		},
 
 		{
-			id: 4,
-			image: '/src/assets/aksesuari-2.jpg',
+			id: 8,
+			image: catalogImgEighth,
 			title: 'Аксессуары',
 			texts: ['Шкафы и шкафы-купе', 'Стеллажи и книжные шкафы', 'Столы', 'Стулья', 'Кровати'],
 			more: 'Больше',

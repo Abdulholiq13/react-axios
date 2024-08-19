@@ -1,16 +1,12 @@
 import React, { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import NotFoundImg from '/src/assets/404-page-not-found.svg';
 
 const NotFountContent = () => {
 	const navigate = useNavigate();
 	return (
 		<div className='container flex flex-col items-center justify-center py-8'>
-			<img
-				src='./src/assets/404-page-not-found.svg'
-				alt='404 Not fount page image'
-				width={400}
-				height={400}
-			/>
+			<img src={NotFoundImg} alt='404 Not fount page image' width={400} height={400} />
 
 			<div className='mt-9 flex gap-8'>
 				<button

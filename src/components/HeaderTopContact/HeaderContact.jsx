@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { NavbarAccount } from '../NavbarAccount/NavbarAccount';
+import NavbarAccount from '../NavbarAccount/NavbarAccount';
 
 const HeaderContact = () => {
 	return (

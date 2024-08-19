@@ -1,4 +1,6 @@
 import React, { memo } from 'react';
+import DeliveryImgSecond from '/src/assets/delivery-image-2.png';
+import DeliveryImgFirst from '/src/assets/delivery-image.png';
 
 const DeliveryInfo = () => {
 	return (
@@ -36,7 +38,7 @@ const DeliveryInfo = () => {
 				<div>
 					<img
 						className='w-[681px] h-[884px]'
-						src='./src/assets/delivery-image.png'
+						src={DeliveryImgFirst}
 						alt='delivery image'
 						width={681}
 						height={884}
@@ -47,7 +49,7 @@ const DeliveryInfo = () => {
 				<div>
 					<img
 						className='w-[814px] h-[605px]'
-						src='./src/assets/delivery-image-2.png'
+						src={DeliveryImgSecond}
 						alt='delivery image'
 						width={814}
 						height={605}

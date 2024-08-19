@@ -2,7 +2,6 @@ import { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-	const navbarLink = ['', '', '', ''];
 	return (
 		<>
 			<ul className='flex gap-7 text-[#000000]'>

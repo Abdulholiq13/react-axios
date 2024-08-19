@@ -2,7 +2,7 @@ import React from 'react';
 import { RiAccountCircleFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
-export const NavbarAccount = () => {
+const NavbarAccount = () => {
 	return (
 		<>
 			<Link to={'/login'}>
@@ -11,3 +11,5 @@ export const NavbarAccount = () => {
 		</>
 	);
 };
+
+export default NavbarAccount;
