@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 import Single from './pages/Single';
 import Admin from './pages/Admin/Admin';
 import Auth from './pages/Auth/Auth';
-import Login from './pages/login/Login';
+import Login from './pages/Login/Login';
 
 const App = () => {
 	const { pathname } = useLocation();
