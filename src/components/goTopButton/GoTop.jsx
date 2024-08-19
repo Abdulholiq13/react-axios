@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaAngleUp } from 'react-icons/fa6';
 
 const GoTop = () => {
@@ -33,4 +33,4 @@ const GoTop = () => {
 	);
 };
 
-export default memo(GoTop);
+export default GoTop;
