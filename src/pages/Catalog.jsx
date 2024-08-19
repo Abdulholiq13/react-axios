@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react';
 import CatalogList from '../components/Catalog/CatalogList';
-import GoTop from '../components/goTopButton/goTop';
+import GoTop from '../components/GoTopButton/goTop';
 
 const Catalog = () => {
 	const [scroll, setScroll] = useState(false);
