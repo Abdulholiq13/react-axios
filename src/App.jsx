@@ -14,9 +14,6 @@ import Login from './pages/login/Login';
 
 const App = () => {
 	const { pathname } = useLocation();
-
-	{
-	}
 	return (
 		<>
 			{pathname !== '/admin' && <HeaderTop />}

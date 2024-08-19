@@ -2,6 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Admin = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<div className=''>
 			<div className='header w-full bg-blue-400 py-8 px-3'>

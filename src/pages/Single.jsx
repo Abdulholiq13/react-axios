@@ -17,6 +17,10 @@ const Single = () => {
 	const [products, setProducts] = useState(null);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [product]);
+
+	useEffect(() => {
 		axios
 			.get(`/products/category/${product?.category}`, { params: { limit: 4 } })
 			.then((res) => setProducts(res.data.products))
