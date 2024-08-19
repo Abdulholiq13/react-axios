@@ -1,6 +1,5 @@
 import React, { memo, useEffect, useState } from 'react';
 import CatalogList from '../components/Catalog/CatalogList';
-import GoTop from '../components/GoTopButton/GoTop';
 
 const Catalog = () => {
 	const [scroll, setScroll] = useState(false);
@@ -11,7 +10,6 @@ const Catalog = () => {
 	return (
 		<>
 			<CatalogList />
-			<GoTop />
 		</>
 	);
 };
