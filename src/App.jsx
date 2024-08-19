@@ -11,7 +11,6 @@ import Single from './pages/Single';
 import Admin from './pages/Admin/Admin';
 import Auth from './pages/Auth/Auth';
 import Login from './pages/Login/Login';
-import GoTop from 'components/GoTopButton/GoTop';
 
 const App = () => {
 	const { pathname } = useLocation();
@@ -31,7 +30,6 @@ const App = () => {
 					</Route>
 					<Route path='*' element={<NotFound />} />
 				</Routes>
-				<GoTop />
 			</main>
 			{pathname !== '/admin' && <Footer />}
 		</>
