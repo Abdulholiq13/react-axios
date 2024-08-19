@@ -1,5 +1,6 @@
 import React, { memo, useEffect, useState } from 'react';
 import DeliveryInfo from '../components/Delivery/DeliveryInfo';
+import GoTop from '../components/goTopButton/goTop';
 
 const Delivery = () => {
 	const [scroll, setScroll] = useState(false);
@@ -10,6 +11,7 @@ const Delivery = () => {
 	return (
 		<>
 			<DeliveryInfo />
+			<GoTop />
 		</>
 	);
 };

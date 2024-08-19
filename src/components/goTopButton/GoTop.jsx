@@ -24,7 +24,7 @@ const GoTop = () => {
 			{showButton && (
 				<button
 					onClick={handleScrollToTop}
-					className='p-3 bg-[#FF9900] fixed rounded-[50px] bottom-[30px] right-[30px]'
+					className='p-4 bg-[#FF9900] fixed rounded-full bottom-[30px] right-[30px]'
 				>
 					<FaAngleUp className='text-sm text-white' />
 				</button>
