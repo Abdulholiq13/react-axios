@@ -1,42 +1,40 @@
-import Footer from './components/Footer/Footer';
-import { Routes, Route, useLocation } from 'react-router-dom';
 import { memo } from 'react';
-import Catalog from './pages/Catalog';
-import Delivery from './pages/Delivery';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
 import HeaderTop from './components/HeaderTop/HeaderTop';
+import Delivery from './pages/Delivery';
 import Home from './pages/Home';
+import Catalog from './pages/Catalog';
 import NotFound from './pages/NotFound';
 import Contact from './pages/Contact';
 import Single from './pages/Single';
 import Admin from './pages/Admin/Admin';
-import Auth from './auth/Auth';
+import Auth from './pages/Auth/Auth';
 import Login from './pages/login/Login';
 
 const App = () => {
 	const { pathname } = useLocation();
 
-	if (pathname == '/admin' || pathname == '/login') {
-		return <></>;
+	{
 	}
 	return (
 		<>
-			<HeaderTop />
-			<main className=''>
+			{pathname !== '/admin' && <HeaderTop />}
+			<main>
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/catalog' element={<Catalog />} />
 					<Route path='/delivery' element={<Delivery />} />
 					<Route path='/contact' element={<Contact />} />
 					<Route path='/product/:id' element={<Single />} />
+					<Route path='/login' element={<Login />} />
 					<Route path='/' element={<Auth />}>
-						<Route path='admin' element={<Admin />}>
-							{/* <Route path='students' element={}/> */}
-						</Route>
+						<Route path='admin' element={<Admin />} />
 					</Route>
 					<Route path='*' element={<NotFound />} />
 				</Routes>
 			</main>
-			<Footer />
+			{pathname !== '/admin' && <Footer />}
 		</>
 	);
 };
