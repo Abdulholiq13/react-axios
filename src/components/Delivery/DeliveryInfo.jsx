@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import DeliveryImgSecond from '/src/assets/delivery-image-2.png';
 import DeliveryImgFirst from '/src/assets/delivery-image.png';
+import GoTop from '../components/GoTopButton/GoTop';
 
 const DeliveryInfo = () => {
 	return (

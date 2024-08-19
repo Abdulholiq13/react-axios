@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useState } from 'react';
 import DeliveryInfo from '../components/Delivery/DeliveryInfo';
-import GoTop from '../components/GoTopButton/goTop';
+import GoTop from '../components/GoTopButton/GoTop';
 
 const Delivery = () => {
 	const [scroll, setScroll] = useState(false);

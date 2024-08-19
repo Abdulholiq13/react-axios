@@ -9,7 +9,7 @@ import SingleImgSkeleton from '../components/Skeleton/SingleImgSkeleton';
 import SingleBigSkeleton from '../components/Skeleton/SingleBigSkeleton';
 import ProductCard from '../components/ProductCards/ProductCard';
 import StockSkeleton from '../components/Skeleton/StockSkeleton';
-import GoTop from '../components/GoTopButton/goTop';
+import GoTop from '../components/GoTopButton/GoTop';
 
 const Single = () => {
 	const [product, setProduct] = useState(null);
